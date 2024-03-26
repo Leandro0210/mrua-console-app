@@ -12,3 +12,8 @@ double distancia = velocidadInicial * tiempo + 0.5 * aceleracion * Math.Pow(tiem
 Console.WriteLine($"La distancia recorrida es: {distancia} metros");
 distancia = (distancia*1)/1000;
 Console.WriteLine($"La distancia recorrida es: {distancia} Kilometros");
+distancia = distancia * 1094;
+Console.WriteLine($"La distancia recorrida es: {distancia} Yardas");
+distancia = distancia * 36;
+Console.WriteLine($"La distancia recorrida es: {distancia} Pulgada");
+
