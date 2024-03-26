@@ -10,3 +10,5 @@ Console.Write("Ingrese el tiempo (s): ");
 double tiempo = Convert.ToDouble(Console.ReadLine());
 double distancia = velocidadInicial * tiempo + 0.5 * aceleracion * Math.Pow(tiempo, 2);
 Console.WriteLine($"La distancia recorrida es: {distancia} metros");
+distancia = (distancia*1)/1000;
+Console.WriteLine($"La distancia recorrida es: {distancia} Kilometros");
