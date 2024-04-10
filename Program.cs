@@ -1,19 +1,27 @@
-﻿// See https://aka.ms/new-console-template for more information
+﻿using System;
 
-Console.WriteLine("Calculadora de MRUA");
-Console.Write("Ingrese la velocidad inicial (m/s): ");
-double velocidadInicial = Convert.ToDouble(Console.ReadLine());
+class Program
+{
+    static void Main()
+    {
+    
+        Console.WriteLine("Ingrese el alto del lote en metros:");
+        double alto = Convert.ToDouble(Console.ReadLine());
 
-Console.Write("Ingrese la aceleración (m/s^2): ");
-double aceleracion = Convert.ToDouble(Console.ReadLine());
-Console.Write("Ingrese el tiempo (s): ");
-double tiempo = Convert.ToDouble(Console.ReadLine());
-double distancia = velocidadInicial * tiempo + 0.5 * aceleracion * Math.Pow(tiempo, 2);
-Console.WriteLine($"La distancia recorrida es: {distancia} metros");
-distancia = (distancia*1)/1000;
-Console.WriteLine($"La distancia recorrida es: {distancia} Kilometros");
-distancia = distancia * 1094;
-Console.WriteLine($"La distancia recorrida es: {distancia} Yardas");
-distancia = distancia * 36;
-Console.WriteLine($"La distancia recorrida es: {distancia} Pulgada");
+        Console.WriteLine("Ingrese el largo del lote en metros:");
+        double largo = Convert.ToDouble(Console.ReadLine());
 
+        Console.WriteLine("Ingrese el precio por metro cuadrado en dolares:");
+        double precioM2 = Convert.ToDouble(Console.ReadLine());
+
+        
+        double area = alto * largo;
+
+       
+        double precioTotal = area * precioM2;
+
+      
+        Console.WriteLine("El área del lote es: " + area + " metros cuadrados");
+        Console.WriteLine("El precio total del lote es: $" + precioTotal);
+    }
+}
